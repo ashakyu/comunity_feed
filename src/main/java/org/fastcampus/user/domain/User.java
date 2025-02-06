@@ -64,4 +64,13 @@ public class User{
     public Long getId() {
         return id;
     }
+
+    public int followerCount(){
+        return followerCount.getCount();
+    }
+    public int followingCount(){
+        return followingCount.getCount();
+    }
+
+
 }
