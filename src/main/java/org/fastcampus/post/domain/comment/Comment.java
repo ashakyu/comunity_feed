@@ -12,6 +12,11 @@ public class Comment{
     private final Content content;
     private final PositiveIntegerCounter likeCount;
 
+
+    public static Comment createComment(Post post, User author, String content){
+        return new Comment(null, post, author, new CommentContent(content));
+    }
+
     public Comment(Long id, Post post, User author, Content content) {
         if(author == null ){
             throw new IllegalArgumentException();
@@ -47,5 +52,13 @@ public class Comment{
         }
 
         this.content.updateContent(updateContent);
+    }
+
+    public int getLikeCount() {
+        return likeCount.getCount();
+    }
+
+    public String getContent() {
+        return content.getContentText();
     }
 }
