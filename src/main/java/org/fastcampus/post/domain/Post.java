@@ -22,7 +22,7 @@ public class Post {
         return new Post(id, author, new PostContent(content), PostPublicationState.PUBLIC);
     }
 
-    public Post(Long id, User author, PostContent content) {
+    public Post(Long id, User author, Content content) {
      this(id, author, content, PostPublicationState.PUBLIC);
     }
     public Post(Long id, User author, Content content, PostPublicationState state) {
@@ -69,4 +69,18 @@ public class Post {
     public String getContent() {
         return content.getContentText();
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public Content getContentObject() {
+        return content;
+    }
+
+
 }
