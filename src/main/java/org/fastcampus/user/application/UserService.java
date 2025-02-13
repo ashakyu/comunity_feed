@@ -1,12 +1,13 @@
 package org.fastcampus.user.application;
 
 import org.fastcampus.user.application.dto.CreateUserRequestDto;
+import org.fastcampus.user.application.dto.GetUserResponseDto;
 import org.fastcampus.user.application.interfaces.UserRepository;
 import org.fastcampus.user.domain.User;
 import org.fastcampus.user.domain.UserInfo;
 import org.springframework.stereotype.Service;
 
-
+@Service
 public class UserService {
 
     private final UserRepository userRepository;
@@ -24,5 +25,12 @@ public class UserService {
     public User getUser(Long userId) {
         return userRepository.findById(userId);
     }
+
+    public GetUserResponseDto getUserProfile(Long userId) {
+        User user = getUser(userId);
+        return new GetUserResponseDto(user);
+    }
+
+
 
 }
