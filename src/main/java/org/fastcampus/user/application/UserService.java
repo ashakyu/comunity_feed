@@ -22,7 +22,7 @@ public class UserService {
         return userRepository.save(user);
     }
     public User getUser(Long userId) {
-        return userRepository.findById(userId).orElseThrow(IllegalArgumentException::new);
+        return userRepository.findById(userId);
     }
 
 }

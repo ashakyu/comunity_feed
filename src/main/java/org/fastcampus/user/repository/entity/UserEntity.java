@@ -26,6 +26,7 @@ public class UserEntity extends TimeBaseEntity {
     private Integer followerCount;
     private Integer followingCount;
 
+
     public UserEntity(User user) {
         this.id = user.getId();
         this.name = user.getName();
