@@ -13,7 +13,7 @@ import org.fastcampus.post.repository.entity.post.PostEntity;
 import org.fastcampus.user.repository.entity.UserEntity;
 
 @Entity
-@Table(name ="commuity_comment")
+@Table(name ="community_comment")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

@@ -12,7 +12,7 @@ import org.fastcampus.post.domain.comment.Comment;
 import org.fastcampus.user.domain.User;
 
 @Entity
-@Table(name ="commuity_like")
+@Table(name ="community_like")
 @NoArgsConstructor
 @Getter
 public class LikeEntity {
