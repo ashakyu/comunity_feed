@@ -8,7 +8,10 @@ import org.fastcampus.post.application.interfaces.PostRepository;
 import org.fastcampus.post.domain.Post;
 import org.fastcampus.user.application.UserService;
 import org.fastcampus.user.domain.User;
+import org.hibernate.annotations.SecondaryRow;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PostService {
 
     private final UserService userService;
@@ -23,7 +26,7 @@ public class PostService {
 
 
     public Post getPost(Long id) {
-        return postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("post not found"));
+        return postRepository.findById(id);
     }
 
     public Post createPost(CreatePostRequestDto dto) {

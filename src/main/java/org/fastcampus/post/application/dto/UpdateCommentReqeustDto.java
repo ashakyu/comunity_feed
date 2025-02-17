@@ -1,4 +1,4 @@
 package org.fastcampus.post.application.dto;
 
-public record UpdateCommentReqeustDto(Long commentId, Long userId, String content) {
+public record UpdateCommentReqeustDto(Long userId, String content) {
 }
