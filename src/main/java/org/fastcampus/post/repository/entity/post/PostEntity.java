@@ -10,6 +10,7 @@ import org.fastcampus.post.domain.Post;
 import org.fastcampus.post.domain.content.PostContent;
 import org.fastcampus.post.domain.content.PostPublicationState;
 import org.fastcampus.user.repository.entity.UserEntity;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name ="community_post")
@@ -32,6 +33,9 @@ public class PostEntity extends TimeBaseEntity {
     private PostPublicationState state;
 
     private Integer likeCount;
+
+    @ColumnDefault("0")
+    private int commentCount;
 
     public PostEntity(Post post) {
         this.id = post.getId();
